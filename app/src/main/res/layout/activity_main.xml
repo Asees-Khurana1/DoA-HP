@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GOVERNMENT SCHEMES"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:id="@+id/category_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Search Bar with EditText and Search Icon -->
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/category_spinner"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/search_input"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Search"
+            android:background="@android:color/darker_gray"
+            android:padding="8dp"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_search"
+            android:contentDescription="Search Icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scheme_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scheme 1 - : abcdfghj"
+            android:background="#FF6347"
+            android:textColor="#FFFFFF"
+            android:padding="8dp" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:background="#FFFFFF" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/gif_area"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/scheme_1"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo"
+        android:contentDescription="GIF Placeholder" />
+</RelativeLayout>
