@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>  <!-- Black Color -->
+    <color name="white">#FFFFFF</color>  <!-- White Color -->
+    <color name="background">#121212</color>  <!-- Dark background -->
+    <color name="textColor">#FFFFFF</color>   <!-- White text -->
+    <color name="cardColor">#333333</color>   <!-- Darker card background -->
+    <color name="placeholderBackground">#888888</color> <!-- Gray placeholder -->
+</resources>
