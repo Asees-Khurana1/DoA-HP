@@ -14,36 +14,27 @@ import java.util.List;
 public class SchemeAdapter extends RecyclerView.Adapter<SchemeAdapter.SchemeViewHolder> {
 
     private final List<Scheme> schemeList;
-    private final Context context;
+    private final MainActivity mainActivity;
 
-    public SchemeAdapter(Context context, List<Scheme> schemeList) {
-        this.context = context;
+    public SchemeAdapter(MainActivity mainActivity, List<Scheme> schemeList) {
+        this.mainActivity = mainActivity;
         this.schemeList = schemeList;
     }
 
-    @NonNull
     @Override
-    public SchemeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public SchemeViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.scheme_item, parent, false);
         return new SchemeViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SchemeViewHolder holder, int position) {
+    public void onBindViewHolder(SchemeViewHolder holder, int position) {
         Scheme scheme = schemeList.get(position);
         holder.schemeName.setText(scheme.getName());
-        holder.schemeThumbnail.setImageResource(scheme.getThumbnail());
-        holder.gifPlaceholder.setImageResource(scheme.getGifPlaceholder());
+        holder.schemeThumbnail.setImageResource(scheme.getImage());
 
-        // Handle click to open SchemeDetailActivity
-        holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(context, SchemeDetailActivity.class);
-            intent.putExtra("scheme_name", scheme.getName());
-            intent.putExtra("scheme_video", scheme.getVideoUrl());  // Pass the video URL
-            intent.putExtra("scheme_content", scheme.getContent());
-            context.startActivity(intent);
-        });
+        holder.itemView.setOnClickListener(v -> mainActivity.openSchemeDetail(scheme));
     }
 
     @Override
@@ -53,13 +44,12 @@ public class SchemeAdapter extends RecyclerView.Adapter<SchemeAdapter.SchemeView
 
     public static class SchemeViewHolder extends RecyclerView.ViewHolder {
         TextView schemeName;
-        ImageView schemeThumbnail, gifPlaceholder;
+        ImageView schemeThumbnail;
 
-        public SchemeViewHolder(@NonNull View itemView) {
+        public SchemeViewHolder(View itemView) {
             super(itemView);
             schemeName = itemView.findViewById(R.id.scheme_name);
             schemeThumbnail = itemView.findViewById(R.id.scheme_thumbnail);
-            gifPlaceholder = itemView.findViewById(R.id.gif_placeholder);
         }
     }
 }

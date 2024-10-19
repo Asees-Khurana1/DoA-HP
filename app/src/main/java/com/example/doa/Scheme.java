@@ -1,37 +1,27 @@
 package com.example.doa;
 
 public class Scheme {
-    private final String name;
-    private final int thumbnail;
-    private final int gifPlaceholder;
-    private final String videoUrl;
-    private final String content;
+    private String name;
+    private int image;
+    private String videoUrl;
+    private String description;
+    private String eligibilityContent;
+    private String howToApplyContent;
 
-    public Scheme(String name, int thumbnail, int gifPlaceholder, String videoUrl, String content) {
+    public Scheme(String name, int image, String videoUrl, String description,
+                  String eligibilityContent, String howToApplyContent) {
         this.name = name;
-        this.thumbnail = thumbnail;
-        this.gifPlaceholder = gifPlaceholder;
+        this.image = image;
         this.videoUrl = videoUrl;
-        this.content = content;
+        this.description = description;
+        this.eligibilityContent = eligibilityContent;
+        this.howToApplyContent = howToApplyContent;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getThumbnail() {
-        return thumbnail;
-    }
-
-    public int getGifPlaceholder() {
-        return gifPlaceholder;
-    }
-
-    public String getVideoUrl() {
-        return videoUrl;
-    }
-
-    public String getContent() {
-        return content;
-    }
+    public String getName() { return name; }
+    public int getImage() { return image; }
+    public String getVideoUrl() { return videoUrl; }
+    public String getDescription() { return description; }
+    public String getEligibilityContent() { return eligibilityContent; }
+    public String getHowToApplyContent() { return howToApplyContent; }
 }

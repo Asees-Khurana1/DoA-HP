@@ -1,5 +1,6 @@
 package com.example.doa;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,8 +15,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private List<Scheme> schemeList = new ArrayList<>();
-    private List<Scheme> filteredList = new ArrayList<>();
+    private final List<Scheme> schemeList = new ArrayList<>();
+    private final List<Scheme> filteredList = new ArrayList<>();
     private SchemeAdapter adapter;
 
     @Override
@@ -54,59 +55,86 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Populate the scheme list with sample data
     private void populateSchemeList() {
         schemeList.add(new Scheme(
                 "Scheme 1",
                 R.drawable.logo,
-                R.drawable.logo,
                 "https://www.youtube.com/embed/5D1bTu-eA90",
-                "This scheme supports farmers by providing subsidies."
+                "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies." +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies." +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies. " +
+                        "This scheme supports farmers by providing subsidies.",
+                "Eligibility:\n1. Must be a farmer.\n2. Minimum age: 18 years.",
+                "How to Apply:\n1. Visit the nearest office.\n2. Fill the application form."
         ));
         schemeList.add(new Scheme(
                 "Scheme 2",
                 R.drawable.logo,
-                R.drawable.logo,
-                "https://www.youtube.com/embed/dQw4w9WgXcQ",
-                "This scheme offers healthcare services to rural communities."
+                "https://www.youtube.com/embed/5D1bTu-eA90",
+                "This scheme supports farmers by providing subsidies.",
+                "Eligibility:\n1. Must be a farmer.\n2. Minimum age: 18 years.",
+                "How to Apply:\n1. Visit the nearest office.\n2. Fill the application form."
         ));
         schemeList.add(new Scheme(
                 "Scheme 3",
                 R.drawable.logo,
-                R.drawable.logo,
-                "https://www.youtube.com/embed/3JZ_D3ELwOQ",
-                "This scheme focuses on improving education quality."
+                "https://www.youtube.com/embed/5D1bTu-eA90",
+                "This scheme supports farmers by providing subsidies.",
+                "Eligibility:\n1. Must be a farmer.\n2. Minimum age: 18 years.",
+                "How to Apply:\n1. Visit the nearest office.\n2. Fill the application form."
         ));
         schemeList.add(new Scheme(
                 "Scheme 4",
                 R.drawable.logo,
-                R.drawable.logo,
-                "https://www.youtube.com/embed/tgbNymZ7vqY",
-                "This scheme creates employment opportunities."
+                "https://www.youtube.com/embed/5D1bTu-eA90",
+                "This scheme supports farmers by providing subsidies.",
+                "Eligibility:\n1. Must be a farmer.\n2. Minimum age: 18 years.",
+                "How to Apply:\n1. Visit the nearest office.\n2. Fill the application form."
         ));
         schemeList.add(new Scheme(
                 "Scheme 5",
                 R.drawable.logo,
-                R.drawable.logo,
-                "https://www.youtube.com/embed/VYOjWnS4cMY",
-                "This scheme promotes horticulture development."
+                "https://www.youtube.com/embed/5D1bTu-eA90",
+                "This scheme supports farmers by providing subsidies.",
+                "Eligibility:\n1. Must be a farmer.\n2. Minimum age: 18 years.",
+                "How to Apply:\n1. Visit the nearest office.\n2. Fill the application form."
         ));
         schemeList.add(new Scheme(
                 "Scheme 6",
                 R.drawable.logo,
-                R.drawable.logo,
-                "https://www.youtube.com/embed/e-ORhEE9VVg",
-                "This scheme supports social welfare programs."
+                "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                "This scheme offers healthcare services to rural communities.",
+                "Eligibility:\n1. Must reside in rural areas.\n2. Registered in healthcare program.",
+                "How to Apply:\n1. Register online.\n2. Visit the community healthcare center."
         ));
 
-        // Initially display all schemes
+        // Display all schemes initially
         filteredList.addAll(schemeList);
     }
 
-    // Filter schemes based on search query
+    @SuppressLint("NotifyDataSetChanged")
     private void filterSchemes(String query) {
         filteredList.clear();
-
         if (query.isEmpty()) {
             filteredList.addAll(schemeList);
         } else {
@@ -116,8 +144,16 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-
-        // Notify adapter of data changes
         adapter.notifyDataSetChanged();
+    }
+
+    public void openSchemeDetail(Scheme scheme) {
+        Intent intent = new Intent(MainActivity.this, SchemeDetailActivity.class);
+        intent.putExtra("scheme_name", scheme.getName());
+        intent.putExtra("scheme_video", scheme.getVideoUrl());
+        intent.putExtra("scheme_content", scheme.getDescription());
+        intent.putExtra("eligibility_content", scheme.getEligibilityContent());
+        intent.putExtra("how_to_apply_content", scheme.getHowToApplyContent());
+        startActivity(intent);
     }
 }

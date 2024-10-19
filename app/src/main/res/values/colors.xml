@@ -1,12 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#000000</color>  <!-- Black Color -->
-    <color name="white">#FFFFFF</color>  <!-- White Color -->
-    <color name="background">#FFFFFF</color>  <!-- Light Background -->
-    <color name="placeholderBackground">#D8BFD8</color>  <!-- Light Purple -->
-    <color name="cardColor">#FF6347</color>  <!-- Tomato Card Background -->
-    <color name="textColor">#000000</color>  <!-- Black Text -->
+    <color name="white">#FFFFFF</color>  <!-- white background -->
+    <color name="black">#000000</color>   <!-- Black text -->
+    <color name="darkgreen">#02472E</color>   <!-- Dark Green text -->
+    <color name="placeholderBackground">#E0E0E0</color>  <!-- Light gray background -->
+    <color name="cardBackground">#FFFFFF</color>  <!-- Explicit white for card -->
 </resources>
-
-
-

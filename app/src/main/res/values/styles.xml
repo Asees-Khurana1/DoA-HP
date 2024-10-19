@@ -1,0 +1,6 @@
+<resources>
+    <style name="CircleImageView" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>  <!-- Makes the image perfectly circular -->
+    </style>
+</resources>
