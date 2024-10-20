@@ -11,6 +11,7 @@ constraintlayout = "2.1.4"
 materialVersion = "1.9.0"
 core = "1.13.1"
 retrofit = "2.9.0"
+gridlayout = "1.0.0"
 
 [libraries]
 cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
@@ -25,6 +26,7 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 material-v190 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 core = { group = "androidx.core", name = "core", version.ref = "core" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+gridlayout = { group = "androidx.gridlayout", name = "gridlayout", version.ref = "gridlayout" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

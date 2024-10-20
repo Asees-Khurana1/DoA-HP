@@ -41,7 +41,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         // Set a delay to transition to MainActivity after the splash duration
         new Handler().postDelayed(() -> {
             // Start MainActivity
-            Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+            Intent intent = new Intent(SplashScreenActivity.this, GridScreenActivity.class);
             startActivity(intent);
 
             // Finish SplashScreenActivity so it's removed from the back stack
