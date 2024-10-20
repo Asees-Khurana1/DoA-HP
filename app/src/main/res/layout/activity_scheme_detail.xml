@@ -1,40 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:fillViewport="true"
     tools:context=".SchemeDetailActivity">
 
-    <!-- Fixed Header (Scheme Name + Logo) -->
     <LinearLayout
-        android:id="@+id/header_layout"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:padding="12dp"
-        android:background="@color/darkgreen"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="WebViewLayout">
 
-        <!-- Align Name and Logo to the Bottom -->
+        <!-- Full-Width Header Layout (Scheme Name + Logo) -->
         <LinearLayout
+            android:id="@+id/header_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="150dp"
             android:orientation="horizontal"
             android:gravity="bottom"
-            android:paddingBottom="8dp">
+            android:background="@color/darkgreen"
+            android:padding="12dp">
 
             <TextView
                 android:id="@+id/scheme_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/holo_orange_light"
                 android:gravity="start"
@@ -43,123 +39,97 @@
             <ImageView
                 android:id="@+id/scheme_logo"
                 android:layout_width="100dp"
-                android:layout_height="125dp"
+                android:layout_height="100dp"
                 android:contentDescription="Scheme Logo"
                 android:scaleType="centerInside" />
         </LinearLayout>
-    </LinearLayout>
 
-    <!-- Scrollable Content -->
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@id/header_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        <!-- YouTube WebView -->
+        <WebView
+            android:id="@+id/youtube_webview"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="8dp" />
 
+        <!-- Buttons Layout (Eligibility and How to Apply) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="24dp"
-            tools:ignore="WebViewLayout">
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="8dp">
 
-            <!-- YouTube WebView -->
-            <WebView
-                android:id="@+id/youtube_webview"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_margin="8dp" />
-
-            <!-- Buttons Layout (Eligibility and How to Apply) -->
-            <LinearLayout
-                style="?android:attr/buttonBarStyle"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/eligibility_button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_margin="8dp">
+                android:layout_weight="1"
+                android:text="Eligibility"
+                android:textColor="@android:color/holo_orange_light"
+                android:backgroundTint="@color/darkgreen"
+                android:layout_marginEnd="8dp" />
 
-                <Button
-                    android:id="@+id/eligibility_button"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Eligibility"
-                    android:textColor="@android:color/holo_orange_light"
-                    android:backgroundTint="@color/darkgreen"
-                    android:layout_marginEnd="8dp" />
-
-                <Button
-                    android:id="@+id/how_to_apply_button"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="How to Apply"
-                    android:textColor="@android:color/holo_orange_light"
-                    android:backgroundTint="@color/darkgreen"
-                    android:layout_marginStart="8dp" />
-            </LinearLayout>
-
-            <!-- Card for Eligibility Content (Initially Hidden) -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/eligibility_card"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/how_to_apply_button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:padding="16dp"
-                android:visibility="gone">
-
-                <TextView
-                    android:id="@+id/eligibility_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Eligibility Criteria:\n\n1. Must be a resident...\n2. Age limit: 18-45 years..."
-                    android:textSize="16sp"
-                    android:padding="16dp"
-                    android:textColor="@color/black"
-                    android:lineSpacingExtra="4dp" />
-            </androidx.cardview.widget.CardView>
-
-            <!-- Card for How to Apply Content (Initially Hidden) -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/how_to_apply_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:padding="16dp"
-                android:visibility="gone">
-
-                <TextView
-                    android:id="@+id/how_to_apply_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Steps to Apply:\n\n1. Fill out the online form...\n2. Attach required documents..."
-                    android:textSize="16sp"
-                    android:padding="16dp"
-                    android:textColor="@color/black"
-                    android:lineSpacingExtra="4dp" />
-            </androidx.cardview.widget.CardView>
-
-            <!-- Scheme Content -->
-            <TextView
-                android:id="@+id/scheme_content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textAlignment="inherit"
-                android:textColor="@color/black"
-                android:lineSpacingExtra="4dp"
-                android:padding="8dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginBottom="24dp" />
+                android:layout_weight="1"
+                android:text="How to Apply"
+                android:textColor="@android:color/holo_orange_light"
+                android:backgroundTint="@color/darkgreen"
+                android:layout_marginStart="8dp" />
         </LinearLayout>
-    </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Card for Eligibility Content -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/eligibility_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/eligibility_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eligibility Criteria:\n\n1. Must be a resident...\n2. Age limit: 18-45 years..."
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="4dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card for How to Apply Content -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/how_to_apply_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/how_to_apply_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Steps to Apply:\n\n1. Fill out the online form...\n2. Attach required documents..."
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="4dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Scheme Content -->
+        <TextView
+            android:id="@+id/scheme_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="inherit"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="4dp"
+            android:padding="8dp"
+            android:layout_marginBottom="24dp" />
+    </LinearLayout>
+</ScrollView>
