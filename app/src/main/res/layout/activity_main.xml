@@ -32,13 +32,14 @@
         android:textStyle="bold"
         android:textColor="@android:color/holo_orange_light"
         android:gravity="start"
-        android:paddingEnd="8dp" />
+        android:layout_marginEnd="8dp" />
 
     <!-- Logo Image -->
     <ImageView
         android:id="@+id/header_logo"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginEnd="10dp"
         android:contentDescription="App Logo"
         android:src="@drawable/logo"
     android:scaleType="centerInside" />
