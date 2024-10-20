@@ -27,6 +27,10 @@ public class SchemeDetailActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_scheme_detail);
 
+        // Handle back button click
+//        ImageView backButton = findViewById(R.id.back_button);
+//        backButton.setOnClickListener(v -> finish());
+
         // Get data from Intent
         String schemeName = getIntent().getStringExtra("scheme_name");
         String schemeVideo = getIntent().getStringExtra("scheme_video");

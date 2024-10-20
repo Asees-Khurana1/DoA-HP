@@ -7,21 +7,26 @@ public class Scheme {
     private String description;
     private String eligibilityContent;
     private String howToApplyContent;
+    private String category;  // New category field
 
+    // Constructor with category
     public Scheme(String name, int image, String videoUrl, String description,
-                  String eligibilityContent, String howToApplyContent) {
+                  String eligibilityContent, String howToApplyContent, String category) {
         this.name = name;
         this.image = image;
         this.videoUrl = videoUrl;
         this.description = description;
         this.eligibilityContent = eligibilityContent;
         this.howToApplyContent = howToApplyContent;
+        this.category = category;
     }
 
+    // Getters for all fields
     public String getName() { return name; }
     public int getImage() { return image; }
     public String getVideoUrl() { return videoUrl; }
     public String getDescription() { return description; }
     public String getEligibilityContent() { return eligibilityContent; }
     public String getHowToApplyContent() { return howToApplyContent; }
+    public String getCategory() { return category; }  // New getter for category
 }

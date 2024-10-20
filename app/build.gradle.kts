@@ -43,6 +43,8 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation(libs.cardview)
     implementation(libs.material.v190)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
 
 
 }

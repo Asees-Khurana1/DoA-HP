@@ -9,4 +9,8 @@
     <string name="eligibility">Eligibility</string>
     <string name="scheme_name">Scheme Name</string>
     <string name="back">Back</string>
+    <string-array name="scheme_categories">
+        <item>Financial</item>
+        <item>Educational</item>
+    </string-array>
 </resources>

@@ -1,119 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:padding="16dp"
-    android:fillViewport="true">
+    tools:context=".SchemeDetailActivity">
 
-    <LinearLayout
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:ignore="WebViewLayout">
-
-<!-- Scheme Name -->
-<TextView
-    android:id="@+id/scheme_name"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textSize="24sp"
-    android:textStyle="bold"
-    android:textColor="@color/darkgreen"
-android:gravity="center"
-android:layout_marginBottom="16dp" />
-
-<!-- YouTube WebView -->
-<WebView
-    android:id="@+id/youtube_webview"
-    android:layout_width="match_parent"
-    android:layout_height="300dp"
-    android:layout_marginBottom="16dp" />
-
-<!-- Buttons Layout (Moved Above Content) -->
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center"
-    android:layout_marginTop="16dp"
-    android:layout_marginBottom="16dp">
-
-    <Button
-        android:id="@+id/eligibility_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/eligibility"
-        android:textColor="@android:color/white"
-        android:backgroundTint="@color/darkgreen"
-        android:layout_marginEnd="8dp" />
-
-    <Button
-        android:id="@+id/how_to_apply_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/how_to_apply"
-        android:textColor="@android:color/white"
-        android:backgroundTint="@color/darkgreen"
-        android:layout_marginStart="8dp" />
-</LinearLayout>
-
-    <!-- Card for Eligibility Content (Initially Hidden) -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/eligibility_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_height="match_parent"
         android:padding="16dp"
-        android:visibility="gone">
+        android:fillViewport="true">
 
-        <TextView
-            android:id="@+id/eligibility_content"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Eligibility Criteria:\n\n1. Must be a resident...\n2. Age limit: 18-45 years..."
-            android:textSize="16sp"
-            android:padding="16dp"
-            android:textColor="@color/black"
-            android:lineSpacingExtra="4dp" />
-    </androidx.cardview.widget.CardView>
+            android:orientation="vertical"
+            tools:ignore="WebViewLayout">
 
-    <!-- Card for How to Apply Content (Initially Hidden) -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/how_to_apply_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:padding="16dp"
-        android:visibility="gone">
+            <!-- Scheme Name -->
+            <TextView
+                android:id="@+id/scheme_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/darkgreen"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
 
-        <TextView
-            android:id="@+id/how_to_apply_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Steps to Apply:\n\n1. Fill out the online form...\n2. Attach required documents..."
-            android:textSize="16sp"
-            android:padding="16dp"
-            android:textColor="@color/black"
-            android:lineSpacingExtra="4dp" />
-    </androidx.cardview.widget.CardView>
+            <!-- YouTube WebView -->
+            <WebView
+                android:id="@+id/youtube_webview"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginBottom="16dp" />
 
-    <!-- Scheme Content -->
-<TextView
-    android:id="@+id/scheme_content"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textSize="16sp"
-    android:textAlignment="inherit"
-    android:textColor="@color/black"
-android:lineSpacingExtra="4dp"
-    android:padding="8dp"
-android:layout_marginBottom="16dp" />
+            <!-- Buttons Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
 
-</LinearLayout>
+                <Button
+                    android:id="@+id/eligibility_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Eligibility"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="@color/darkgreen"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/how_to_apply_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="How to Apply"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="@color/darkgreen"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Eligibility Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/eligibility_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/eligibility_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Eligibility Criteria:\n\n1. Must be a resident...\n2. Age limit: 18-45 years..."
+                    android:textSize="16sp"
+                    android:padding="16dp"
+                    android:textColor="@color/black"
+                    android:lineSpacingExtra="4dp" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- How to Apply Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/how_to_apply_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/how_to_apply_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Steps to Apply:\n\n1. Fill out the online form...\n2. Attach required documents..."
+                    android:textSize="16sp"
+                    android:padding="16dp"
+                    android:textColor="@color/black"
+                    android:lineSpacingExtra="4dp" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Scheme Content -->
+            <TextView
+                android:id="@+id/scheme_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textAlignment="inherit"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="4dp"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
     </ScrollView>
+
+    <!-- Floating Action Button -->
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_translate"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:src="@android:drawable/ic_menu_manage"-->
+<!--        android:contentDescription="Translate"-->
+<!--        android:backgroundTint="@color/darkgreen" />-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
