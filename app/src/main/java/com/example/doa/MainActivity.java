@@ -93,42 +93,42 @@ public class MainActivity extends AppCompatActivity {
 
     private void populateSchemeList() {
         schemeList.add(new Scheme("Scheme 1", R.drawable.logo,
-                "https://youtu.be/5D1bTu-eA90",
+                "https://youtube.com/embed/5D1bTu-eA90",
                 "This scheme supports farmers.",
                 "Eligibility: Must be a farmer.",
                 "How to Apply: Visit the nearest office.",
                 "Financial"));
 
         schemeList.add(new Scheme("Scheme 2", R.drawable.logo,
-                "https://youtu.be/5D1bTu-eA90",
+                "https://youtube.com/embed/5D1bTu-eA90",
                 "This scheme supports farmers.",
                 "Eligibility: Must be a farmer.",
                 "How to Apply: Visit the nearest office.",
                 "Financial"));
 
         schemeList.add(new Scheme("Scheme 3", R.drawable.logo,
-                "https://youtu.be/5D1bTu-eA90",
+                "https://youtube.com/embed/5D1bTu-eA90",
                 "This scheme supports farmers.",
                 "Eligibility: Must be a farmer.",
                 "How to Apply: Visit the nearest office.",
                 "Educational"));
 
         schemeList.add(new Scheme("Scheme 4", R.drawable.logo,
-                "https://youtu.be/5D1bTu-eA90",
+                "https://youtube.com/embed/5D1bTu-eA90",
                 "This scheme supports farmers.",
                 "Eligibility: Must be a farmer.",
                 "How to Apply: Visit the nearest office.",
                 "Educational"));
 
         schemeList.add(new Scheme("Scheme 5", R.drawable.logo,
-                "https://youtu.be/5D1bTu-eA90",
+                "https://youtube.com/embed/5D1bTu-eA90",
                 "This scheme supports farmers.",
                 "Eligibility: Must be a farmer.",
                 "How to Apply: Visit the nearest office.",
                 "Financial"));
 
         schemeList.add(new Scheme("Scheme 6", R.drawable.logo,
-                "https://youtu.be/dQw4w9WgXcQ",
+                "https://youtube.com/embed/dQw4w9WgXcQ",
                 "Healthcare services for rural areas.",
                 "Eligibility: Must reside in rural areas.",
                 "How to Apply: Register online.",
