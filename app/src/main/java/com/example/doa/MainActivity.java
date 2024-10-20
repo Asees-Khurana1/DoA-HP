@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void populateSchemeList() {
         schemeList.add(new Scheme("HIM UNNATI YOJANA", R.drawable.him_unati_yojana,
-                "https://youtube.com/embed/5D1bTu-eA90",
+                "https://youtube.com/embed/_6viRHCjl9Y",
                 "HIM UNNATI YOJANA is an initiative by the Himachal Pradesh government aimed\n" +
                         "at boosting the agricultural and horticultural sectors. The scheme is focused on\n" +
                         "promoting sustainable development, increasing productivity, and improving the\n" +
@@ -111,14 +111,12 @@ public class MainActivity extends AppCompatActivity {
                         "state government's agriculture portal.\n" +
                         "○ Navigate to the section for schemes and select \"HIM UNNATI\n" +
                         "YOJANA.\"\n" +
-                        "\n" +
                         "○ Fill in the necessary details such as personal information, landholding\n" +
                         "details, and the specific activities for which you are applying.\n" +
                         "○ Upload required documents like proof of land ownership, identity proof\n" +
                         "(Aadhaar card), and income certificates (if needed).\n" +
                         "○ Submit the application form online and save the acknowledgment\n" +
                         "number for future reference.\n" +
-                        "\n" +
                         "2. Offline Application:\n" +
                         "○ Farmers can also visit their nearest Agriculture/Horticulture\n" +
                         "Department Office in Himachal Pradesh.\n" +
@@ -131,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.logo));
 
         schemeList.add(new Scheme("Prakritik Kheti Khushhal Kisan Yojana", R.drawable.prakritik,
-                "https://youtube.com/embed/5D1bTu-eA90",
+                "https://youtube.com/embed/_6viRHCjl9Y",
                 "Prakritik Kheti Khushhal Kisan Yojana is an initiative by the Government of\n" +
                         "Himachal Pradesh that promotes natural or traditional farming methods to reduce\n" +
                         "farmers' dependence on chemical fertilizers and pesticides. The scheme aims to\n" +
@@ -188,7 +186,6 @@ public class MainActivity extends AppCompatActivity {
                         "Prakritik Kheti Khushhal Kisan Yojana portal.\n" +
                         "○ Register as a farmer on the portal and complete the online application\n" +
                         "form with details about your farm, landholding, and current\n" +
-                        "\n" +
                         "agricultural practices.\n" +
                         "○ Provide information about the ZBNF practices you intend to adopt.\n" +
                         "○ Upload required documents such as proof of identity, land records, and\n" +
@@ -207,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.logo));
 
         schemeList.add(new Scheme("Rajya Krishi Yantrikaran Programme", R.drawable.rajya_krishi,
-                "https://youtube.com/embed/5D1bTu-eA90",
+                "https://youtube.com/embed/_6viRHCjl9Y",
                 "Rajya Krishi Yantrikaran Programme is a scheme initiated by various state\n" +
                         "governments in India, including Himachal Pradesh, to promote farm mechanization.\n" +
                         "The primary objective of the scheme is to help farmers access modern agricultural\n" +
@@ -225,7 +222,6 @@ public class MainActivity extends AppCompatActivity {
                 "1. Online Application:\n" +
                         "○ Visit the Agriculture Department website of the respective state.\n" +
                         "○ Look for the \"Farm Mechanization\" or \"Rajya Krishi Yantrikaran\n" +
-                        "\n" +
                         "Programme\" section.\n" +
                         "○ Register yourself as a farmer on the portal (if not already registered).\n" +
                         "○ Fill in the application form with your personal details, landholding\n" +
@@ -244,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.logo));
 
         schemeList.add(new Scheme("The Flow Irrigation Scheme", R.drawable.flow_irrigation,
-                "https://youtube.com/embed/5D1bTu-eA90",
+                "https://youtube.com/embed/_6viRHCjl9Y",
                 "The Flow Irrigation Scheme is an initiative by various state governments in India,\n" +
                         "including Himachal Pradesh, to improve irrigation facilities by harnessing natural\n" +
                         "water sources, such as rivers, streams, and other water bodies, to provide efficient\n" +
@@ -262,7 +258,6 @@ public class MainActivity extends AppCompatActivity {
                         "website of your state.\n" +
                         "○ Navigate to the \"Irrigation Schemes\" or \"Flow Irrigation Scheme\"\n" +
                         "section.\n" +
-                        "\n" +
                         "○ Register yourself on the portal if required and fill in the application\n" +
                         "form with relevant details like personal information, landholding\n" +
                         "details, and specific irrigation requirements.\n" +
@@ -270,7 +265,6 @@ public class MainActivity extends AppCompatActivity {
                         "documents, and a water source verification certificate.\n" +
                         "○ Submit the application form online and keep the acknowledgment\n" +
                         "number for future reference.\n" +
-                        "\n" +
                         "2. Offline Application:\n" +
                         "○ Visit the nearest Agriculture Department, Irrigation Department\n" +
                         "Office, or Krishi Vigyan Kendra (KVK) in your area to collect the\n" +
@@ -282,6 +276,60 @@ public class MainActivity extends AppCompatActivity {
                         "○ Upon submission, you will receive an acknowledgment receipt, which\n" +
                         "can be used for follow-up.",
                 "Financial",
+                R.drawable.logo));
+
+        schemeList.add(new Scheme("Scheme 5",
+                R.drawable.logo,
+                "https://youtube.com/embed/_6viRHCjl9Y",
+                "Scheme Description",
+                "Eligibility Criteria",
+                "Application Process",
+                "Financial",
+                R.drawable.logo));
+
+        schemeList.add(new Scheme("Scheme 6",
+                R.drawable.logo,
+                "https://youtube.com/embed/_6viRHCjl9Y",
+                "Scheme Description",
+                "Eligibility Criteria",
+                "Application Process",
+                "Financial",
+                R.drawable.logo));
+
+        schemeList.add(new Scheme("Scheme 7",
+                R.drawable.logo,
+                "https://youtube.com/embed/_6viRHCjl9Y",
+                "Scheme Description",
+                "Eligibility Criteria",
+                "Application Process",
+                "Financial",
+                R.drawable.logo));
+
+        schemeList.add(new Scheme("Scheme 8",
+                R.drawable.logo,
+                "https://youtube.com/embed/_6viRHCjl9Y",
+                "Scheme Description",
+                "Eligibility Criteria",
+                "Application Process",
+                "Educational",
+                R.drawable.logo));
+
+        schemeList.add(new Scheme("Scheme 9",
+                R.drawable.logo,
+                "https://youtube.com/embed/_6viRHCjl9Y",
+                "Scheme Description",
+                "Eligibility Criteria",
+                "Application Process",
+                "Educational",
+                R.drawable.logo));
+
+        schemeList.add(new Scheme("Scheme 10",
+                R.drawable.logo,
+                "https://youtube.com/embed/_6viRHCjl9Y",
+                "Scheme Description",
+                "Eligibility Criteria",
+                "Application Process",
+                "Educational",
                 R.drawable.logo));
 
     }
