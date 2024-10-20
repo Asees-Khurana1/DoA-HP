@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -47,10 +48,9 @@ public class MainActivity extends AppCompatActivity {
         // Initialize Spinner for category selection
         Spinner categorySpinner = findViewById(R.id.category_spinner);
         ArrayAdapter<CharSequence> spinnerAdapter = ArrayAdapter.createFromResource(
-                this, R.array.scheme_categories, android.R.layout.simple_spinner_item);
-        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                this, R.array.scheme_categories, R.layout.spinner_item); // Use custom spinner item layout
+        spinnerAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item); // Custom dropdown style
         categorySpinner.setAdapter(spinnerAdapter);
-
 
         // Set default category to "Financial"
         categorySpinner.setSelection(0);
@@ -133,16 +133,11 @@ public class MainActivity extends AppCompatActivity {
                 "Eligibility: Must reside in rural areas.",
                 "How to Apply: Register online.",
                 "Educational"));
-
-        // Add more schemes here if needed
     }
 
     @SuppressLint("NotifyDataSetChanged")
     private void filterSchemes() {
-        // Clear the filtered list before adding new items
         filteredList.clear();
-
-        // Filter schemes based on the selected category and search query
         for (Scheme scheme : schemeList) {
             boolean matchesCategory = scheme.getCategory().equalsIgnoreCase(selectedCategory);
             boolean matchesQuery = scheme.getName().toLowerCase().contains(searchQuery.toLowerCase());
@@ -151,8 +146,6 @@ public class MainActivity extends AppCompatActivity {
                 filteredList.add(scheme);
             }
         }
-
-        // Notify the adapter of the changes
         adapter.notifyDataSetChanged();
     }
 
