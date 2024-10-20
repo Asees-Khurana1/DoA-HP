@@ -95,7 +95,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Agriculture"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         android:textColor="@color/darkgreen"
                         android:textStyle="bold"
                         android:gravity="center_horizontal|bottom" />
@@ -130,7 +130,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Horticulture"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         android:textColor="@color/darkgreen"
                         android:textStyle="bold"
                         android:gravity="center_horizontal|bottom" />
@@ -165,7 +165,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tourism"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         android:textColor="@color/darkgreen"
                         android:textStyle="bold"
                         android:gravity="center_horizontal|bottom" />
@@ -200,7 +200,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Industries"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         android:textColor="@color/darkgreen"
                         android:textStyle="bold"
                         android:gravity="center_horizontal|bottom" />
@@ -235,7 +235,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Expenditure"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         android:textColor="@color/darkgreen"
                         android:textStyle="bold"
                         android:gravity="center_horizontal|bottom" />
@@ -269,8 +269,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Expenditure"
-                        android:textSize="20sp"
+                        android:text="Telecommunication"
+                        android:textSize="17sp"
                         android:textColor="@color/darkgreen"
                         android:textStyle="bold"
                         android:gravity="center_horizontal|bottom" />

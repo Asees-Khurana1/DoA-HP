@@ -8,10 +8,12 @@ public class Scheme {
     private String eligibilityContent;
     private String howToApplyContent;
     private String category;  // New category field
+    private int logoResource; // New field for scheme logo
+
 
     // Constructor with category
     public Scheme(String name, int image, String videoUrl, String description,
-                  String eligibilityContent, String howToApplyContent, String category) {
+                  String eligibilityContent, String howToApplyContent, String category, int logoResource) {
         this.name = name;
         this.image = image;
         this.videoUrl = videoUrl;
@@ -19,6 +21,8 @@ public class Scheme {
         this.eligibilityContent = eligibilityContent;
         this.howToApplyContent = howToApplyContent;
         this.category = category;
+        this.logoResource = logoResource; // Initialize logo
+
     }
 
     // Getters for all fields
@@ -28,5 +32,6 @@ public class Scheme {
     public String getDescription() { return description; }
     public String getEligibilityContent() { return eligibilityContent; }
     public String getHowToApplyContent() { return howToApplyContent; }
-    public String getCategory() { return category; }  // New getter for category
+    public String getCategory() { return category; }
+    public int getLogoResource() { return logoResource; }
 }
