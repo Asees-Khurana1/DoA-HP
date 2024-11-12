@@ -26,24 +26,13 @@
                 android:id="@+id/government_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Government "
+                android:text="@string/government_schemes"
                 android:textSize="22sp"
                 android:textColor="@android:color/holo_orange_light"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:id="@+id/schemes_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/schemes"
-                android:textSize="22sp"
-                android:textColor="@android:color/holo_orange_light"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/government_text"
-                android:layout_marginEnd="8dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginEnd="8dp"/>
 
             <ImageView
                 android:id="@+id/logo"
@@ -88,13 +77,13 @@
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:src="@drawable/agriculture"
-                        android:contentDescription="Agriculture Icon"
+                        android:contentDescription="@string/agriculture_icon"
                         android:layout_marginBottom="8dp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Agriculture"
+                        android:text="@string/agriculture"
                         android:textSize="17sp"
                         android:textColor="@color/darkgreen"
                         android:textStyle="bold"
@@ -123,13 +112,13 @@
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:src="@drawable/horticulture"
-                        android:contentDescription="Horticulture Icon"
+                        android:contentDescription="@string/horticulture_icon"
                         android:layout_marginBottom="8dp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Horticulture"
+                        android:text="@string/horticulture"
                         android:textSize="17sp"
                         android:textColor="@color/darkgreen"
                         android:textStyle="bold"
@@ -158,13 +147,13 @@
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:src="@drawable/tourism"
-                        android:contentDescription="Tourism Icon"
+                        android:contentDescription="@string/tourism_icon"
                         android:layout_marginBottom="8dp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Tourism"
+                        android:text="@string/tourism"
                         android:textSize="17sp"
                         android:textColor="@color/darkgreen"
                         android:textStyle="bold"
@@ -193,13 +182,13 @@
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:src="@drawable/industries"
-                        android:contentDescription="Industry Icon"
+                        android:contentDescription="@string/industry_icon"
                         android:layout_marginBottom="8dp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Industries"
+                        android:text="@string/industries"
                         android:textSize="17sp"
                         android:textColor="@color/darkgreen"
                         android:textStyle="bold"
@@ -228,13 +217,13 @@
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:src="@drawable/expenditure"
-                        android:contentDescription="Expenditure Icon"
+                        android:contentDescription="@string/expenditure_icon"
                         android:layout_marginBottom="8dp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Expenditure"
+                        android:text="@string/expenditure"
                         android:textSize="17sp"
                         android:textColor="@color/darkgreen"
                         android:textStyle="bold"
@@ -263,13 +252,13 @@
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:src="@drawable/telecommunication"
-                        android:contentDescription="Expenditure Icon"
+                        android:contentDescription="@string/telecommunication_icon"
                         android:layout_marginBottom="8dp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Telecommunication"
+                        android:text="@string/telecommunication"
                         android:textSize="17sp"
                         android:textColor="@color/darkgreen"
                         android:textStyle="bold"

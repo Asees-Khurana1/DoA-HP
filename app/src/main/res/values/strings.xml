@@ -11,14 +11,23 @@
     <string name="schemes">Schemes</string>
     <string name="app_logo">App Logo</string>
     <string name="government_schemes">Government Schemes</string>
+    <string name="agriculture_icon">Agriculture Icon</string>
+    <string name="agriculture">Agriculture</string>
+    <string name="horticulture">Horticulture</string>
+    <string name="horticulture_icon">Horticulture Icon</string>
+    <string name="tourism_icon">Tourism Icon</string>
+    <string name="tourism">Tourism</string>
+    <string name="industry_icon">Industry Icon</string>
+    <string name="industries">Industries</string>
+    <string name="expenditure_icon">Expenditure Icon</string>
+    <string name="expenditure">Expenditure</string>
+    <string name="telecommunication_icon">Telecommunication Icon</string>
+    <string name="telecommunication">Telecommunication</string>
+    <string name="scheme_logo">Scheme Logo</string>
+    <string name="eligibility_criteria_default">Eligibility Criteria:\n\n1. Must be a resident...\n2. Age limit: 18-45 years...</string>
+    <string name="steps_to_apply_default">Steps to Apply:\n\n1. Fill out the online form...\n2. Attach required documents...</string>
     <string-array name="scheme_categories">
         <item>Financial</item>
         <item>Educational</item>
-    </string-array>
-    <string-array name="category_array">
-        <item>Financial</item>
-        <item>Educational</item>
-        <item>Agriculture</item>
-        <item>Healthcare</item>
     </string-array>
 </resources>

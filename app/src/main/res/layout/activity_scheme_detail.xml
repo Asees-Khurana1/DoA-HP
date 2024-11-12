@@ -40,7 +40,7 @@
                 android:id="@+id/scheme_logo"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:contentDescription="Scheme Logo"
+                android:contentDescription="@string/scheme_logo"
                 android:scaleType="centerInside" />
         </LinearLayout>
 
@@ -64,7 +64,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Eligibility"
+                android:text="@string/eligibility"
                 android:textColor="@android:color/holo_orange_light"
                 android:backgroundTint="@color/darkgreen"
                 android:layout_marginEnd="8dp" />
@@ -74,7 +74,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="How to Apply"
+                android:text="@string/how_to_apply"
                 android:textColor="@android:color/holo_orange_light"
                 android:backgroundTint="@color/darkgreen"
                 android:layout_marginStart="8dp" />
@@ -93,7 +93,7 @@
                 android:id="@+id/eligibility_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Eligibility Criteria:\n\n1. Must be a resident...\n2. Age limit: 18-45 years..."
+                android:text="@string/eligibility_criteria_default"
                 android:textSize="16sp"
                 android:padding="16dp"
                 android:textColor="@color/black"
@@ -113,7 +113,7 @@
                 android:id="@+id/how_to_apply_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Steps to Apply:\n\n1. Fill out the online form...\n2. Attach required documents..."
+                android:text="@string/steps_to_apply_default"
                 android:textSize="16sp"
                 android:padding="16dp"
                 android:textColor="@color/black"
